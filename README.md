@@ -44,9 +44,9 @@ Abaixo está disposto o registro visual da das conexões de Hardware para cada u
 
 <p align="center">
   <!-- Substitua pelo nome real do arquivo do seu ESP32 quando carregá-lo na raiz do repositório -->
-  <img src="esp32" alt="Placa de Desenvolvimento ESP32 DevKit" width="500">
+  <img src="montagemrhrd.jpeg" alt="Placa de Desenvolvimento ESP32 DevKit + Módulo MH-RD" width="500">
   <br>
-  <em>Figura 1: Unidade de Processamento Central baseada na placa de desenvolvimento ESP32 DevKit.</em>
+  <em>Figura 1: Unidade de Processamento Central baseada na placa de desenvolvimento ESP32 DevKit + Módulo MH-RD.</em>
 </p>
 
 ---
