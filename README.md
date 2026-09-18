@@ -58,6 +58,9 @@ A seleção dos componentes obedeceu a critérios rígidos de estabilidade de si
 *   **Módulo Sensor Pluviométrico (MH-RD):** Composto por uma grade condutora exposta à precipitação e um circuito integrador baseado no comparador de tensão **LM393**. O módulo filtra as variações resistivas provocadas pela condutividade da água e entrega um sinal digital estabilizado.
 *   **Sensor de Intrusão (Porta):** Interruptor magnético do tipo *Reed Switch* operando como contato seco.
 *   **Sensor Termo-Higrométrico (DHT11):** Transmissor digital microcontrolado que integra um sensor capacitivo de umidade e um termistor do tipo NTC, convertendo grandezas analógicas em pacotes de dados digitais por meio de protocolo de fio único (*Single-Wire*).
+*   <p align="center">
+  <img src="DHT11.jpeg" alt="Protótipo do Sistema IoT" width="600">
+</p>
 
 ### 📌 Justificativa Técnica da Pinagem Escolhida
 *   **GPIO 34 (Sensor de Chuva):** Pino físico do barramento do ESP32 DevKit configurado estritamente como entrada de dados (*Input Only*). A escolha baseia-se no fato de pertencer ao barramento interno **ADC1**, o que impede falhas de leitura ou desconexões quando o modem Wi-Fi do chip exige máxima corrente de transmissão (uma limitação física conhecida do barramento secundário ADC2 do ESP32).
