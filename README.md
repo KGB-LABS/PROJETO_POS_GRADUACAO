@@ -44,7 +44,7 @@ Abaixo está disposto o registro visual da unidade central de processamento que 
 
 <p align="center">
   <!-- Substitua pelo nome real do arquivo do seu ESP32 quando carregá-lo na raiz do repositório -->
-  <img src="esp32_devkit.jpeg" alt="Placa de Desenvolvimento ESP32 DevKit" width="500">
+  <img src="esp32" alt="Placa de Desenvolvimento ESP32 DevKit" width="500">
   <br>
   <em>Figura 1: Unidade de Processamento Central baseada na placa de desenvolvimento ESP32 DevKit.</em>
 </p>
@@ -66,12 +66,18 @@ A seleção dos componentes obedeceu a critérios rígidos de estabilidade de si
 </p>
 
 *   **Sensor de Intrusão (Porta):** Interruptor magnético do tipo *Reed Switch* operando como contato seco.
+<p align="center">
+  <img src="sensorporta.jpeg" alt="Sensor Termo-Higrométrico DHT11" width="350">
+  <br>
+  <em>Figura 3: Sensor tip Reed Switch responsável por informar o estado aberto/fechado de porta.</em>
+</p>
+
 *   **Sensor Termo-Higrométrico (DHT11):** Transmissor digital microcontrolado que integra um sensor capacitivo de umidade e um termistor do tipo NTC, convertendo grandezas analógicas em pacotes de dados digitais por meio de protocolo de fio único (*Single-Wire*).
 
 <p align="center">
   <img src="DHT11.jpeg" alt="Sensor Termo-Higrométrico DHT11" width="350">
   <br>
-  <em>Figura 3: Sensor Termo-Higrométrico (DHT11) responsável pela coleta das grandezas de temperatura e umidade.</em>
+  <em>Figura 4: Sensor Termo-Higrométrico (DHT11) responsável pela coleta das grandezas de temperatura e umidade.</em>
 </p>
 
 ### 📌 Justificativa Técnica da Pinagem Escolhida
