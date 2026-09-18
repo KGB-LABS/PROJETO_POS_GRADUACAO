@@ -40,7 +40,7 @@ A camada de aplicação permite que o usuário faça consultas ativas ao sistema
 
 ## 📸 Demonstração Visual do Protótipo
 
-Abaixo está disposto o registro visual da unidade central de processamento que gerencia todo o ecossistema IoT residencial.
+Abaixo está disposto o registro visual da das conexões de Hardware para cada unidade de processamento do ecossistema IoT residencial.
 
 <p align="center">
   <!-- Substitua pelo nome real do arquivo do seu ESP32 quando carregá-lo na raiz do repositório -->
