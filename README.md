@@ -112,34 +112,6 @@ Para garantir a segurança do sistema e evitar o armazenamento rígido (*hardcod
 O transporte das informações estruturadas de telemetria é feito através do protocolo **MQTT (Message Queuing Telemetry Transport)**, utilizando pacotes leves em formato **JSON**. A comunicação é direcionada por meio de sockets criptografados TLS (porta padrão 8883) para um cluster em nuvem de alta disponibilidade do **HiveMQ Cloud**, organizados sob tópicos hierárquicos. O cliente de rede dispensa a validação estática de cadeias de certificados públicos locais para otimizar o uso da memória RAM (SRAM) do sistema embarcado.
 
 ### 3. Interface Homem-Máquina (IHM) com Controle de Acesso
-A camada de interação com o usuário final é integrada diretamente à API de mensageria do **Telegram**. Para assegurar a confidencialidade e a integridade da automação residencial, o sistema possui uma diretiva rígida de controle de acesso baseada no identificador numérico único do usuário (*Chat ID*). Qualquer tentativa de comando ou requisição originada por contas não cadastradas é sumariamente rejeitada pelo microcontrolador.
+A camada de interação com o usuário final é integrada diretamente à API de mensagem do **Telegram**. Para assegurar a confidencialidade e a integridade da automação residencial, o sistema possui uma diretiva rígida de controle de acesso baseada no identificador numérico único do usuário (*Chat ID*) e Token. Qualquer tentativa de comando ou requisição originada por contas não cadastradas é sumariamente rejeitada pelo microcontrolador, ainda que tenham acessado o bot.
 
----
 
-## 📂 Estrutura de Organização do Repositório
-
-```text
-├── .gitignore               # Exclusão de arquivos temporários de compilação locais
-├── LICENSE                  # Licença mit de livre distribuição acadêmica
-├── README.md                # Documentação conceitual do projeto (Este arquivo)
-├── esp32_devkit.jpeg        # Imagem da placa central de processamento (A carregar)
-├── DHT11.jpeg               # Imagem do sensor termo-higrométrico
-├── PLACA MH-RD.jpeg         # Imagem da grade sensora de chuva
-├── modulo_lm393.jpeg        # Imagem do chip comparador do sensor de chuva
-└── src/
-    └── src.ino              # Diretório contendo o arquivo de firmware do ESP32
-```
-
----
-
-## 🤝 Contribuições e Melhorias
-O projeto foi concebido para ser escalável. Melhorias na eficiência energética do firmware (como aplicação de rotinas de *Deep Sleep*), adição de novos sensores industriais ou refinamentos nos mecanismos de segurança e criptografia são bem-vendas.
-
-1. Faça o **Fork** do repositório.
-2. Crie uma ramificação para sua modificação (`git checkout -b feature/NovaFuncionalidade`).
-3. Envie suas propostas via **Pull Request** detalhando as melhorias conceituais aplicadas.
-
----
-
-## ⚖️ Licença de Uso
-Este projeto é distribuído de forma livre e aberta sob as diretrizes da Licença **MIT**.
