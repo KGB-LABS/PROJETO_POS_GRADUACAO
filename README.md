@@ -56,6 +56,12 @@ Abaixo está disposto o registro visual da unidade central de processamento que 
 A seleção dos componentes obedeceu a critérios rígidos de estabilidade de sinal, isolamento de ruídos eletromagnéticos e compatibilidade nativa de níveis lógicos em **3.3V DC**:
 
 *   **Unidade de Processamento Central (MCU):** Placa de Desenvolvimento **ESP32 DevKit**. Baseada no SoC Xtensa Dual-Core de 32 bits com clock de até 240 MHz. Integra regulador de tensão onboard para conversão de alimentação USB/Externa para os níveis de barramento internos, além de transceptores para redes sem fio (Wi-Fi 802.11 b/g/n) e subsistema de memória não-volátil (NVS).
+<p align="center">
+  <img src="esp32.jpeg" alt="Esp32 Devkit" width="350">
+  <br>
+  <em>Figura 1: MCU tipo Esp32 DEVKIT responsável pelo processamento.</em>
+</p>
+
 *   **Módulo Sensor Pluviométrico (MH-RD):** Composto por uma grade condutora exposta à precipitação e um circuito integrador baseado no comparador de tensão **LM393**. O módulo filtra as variações resistivas provocadas pela condutividade da água e entrega um sinal digital estabilizado.
 
 <p align="center">
@@ -67,7 +73,7 @@ A seleção dos componentes obedeceu a critérios rígidos de estabilidade de si
 
 *   **Sensor de Intrusão (Porta):** Interruptor magnético do tipo *Reed Switch* operando como contato seco.
 <p align="center">
-  <img src="sensorporta.jpeg" alt="Sensor Termo-Higrométrico DHT11" width="350">
+  <img src="sensorporta.jpeg" alt="Sensor Porta Reed Switch" width="350">
   <br>
   <em>Figura 3: Sensor tip Reed Switch responsável por informar o estado aberto/fechado de porta.</em>
 </p>
