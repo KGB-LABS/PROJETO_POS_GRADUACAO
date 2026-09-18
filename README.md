@@ -79,11 +79,11 @@ A seleção dos componentes obedeceu a critérios rígidos de estabilidade de si
   <em>Figura 2: Componentes do sensor de chuva (Esquerda: Placa sensora resistiva MH-RD; Direita: Módulo comparador de sinal LM393).</em>
 </p>
 
-*   **Sensor de Intrusão (Porta):** Interruptor magnético do tipo *Reed Switch* operando como contato seco.
+*   **Sensor de Intrusão (Porta):** Interruptor magnético MC 38 *Reed Switch* operando como contato aberto/fechado.
 <p align="center">
   <img src="sensorporta.jpeg" alt="Sensor Porta Reed Switch" width="350">
   <br>
-  <em>Figura 3: Sensor tip Reed Switch responsável por informar o estado aberto/fechado de porta.</em>
+  <em>Figura 3: Sensor MC 38 Reed Switch responsável por informar o estado aberto/fechado de porta.</em>
 </p>
 
 *   **Sensor Termo-Higrométrico (DHT11):** Transmissor digital microcontrolado que integra um sensor capacitivo de umidade e um termistor do tipo NTC, convertendo grandezas analógicas em pacotes de dados digitais por meio de protocolo de fio único (*Single-Wire*).
