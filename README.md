@@ -38,14 +38,14 @@ A camada de aplicação permite que o usuário faça consultas ativas ao sistema
 
 ---
 
-## 📸 Demonstração Visual e Protótipo
+## 📸 Demonstração Visual do Protótipo
 
-> 💡 *Instrução: Salve a foto do seu circuito ou um diagrama refinado na pasta `assets` do seu repositório com o nome `prototipo.jpg` (ou altere o link abaixo caso use uma URL externa).*
+Abaixo estão dispostos os registros visuais dos componentes fundamentais do sistema embarcado integrados à placa de desenvolvimento ESP32 DevKit.
 
 <p align="center">
-  <img src="assets/prototipo.jpg" alt="Protótipo do Sistema IoT Montado" width="650">
+  <img src="DHT11.jpeg" alt="Módulo Sensor DHT11 e ESP32 DevKit" width="550">
   <br>
-  <em>Figura 1: Visão geral do hardware do sistema embarcado baseado em ESP32 DevKit e sua integração física.</em>
+  <em>Figura 1: Unidade de processamento central baseada no ESP32 DevKit integrada ao sensor termo-higrométrico DHT11.</em>
 </p>
 
 ---
@@ -55,16 +55,17 @@ A camada de aplicação permite que o usuário faça consultas ativas ao sistema
 A seleção dos componentes obedeceu a critérios rígidos de estabilidade de sinal, isolamento de ruídos eletromagnéticos e compatibilidade nativa de níveis lógicos em **3.3V DC**:
 
 *   **Unidade de Processamento Central (MCU):** Placa de Desenvolvimento **ESP32 DevKit**. Baseada no SoC Xtensa Dual-Core de 32 bits com clock de até 240 MHz. Integra regulador de tensão onboard para conversão de alimentação USB/Externa para os níveis de barramento internos, além de transceptores para redes sem fio (Wi-Fi 802.11 b/g/n) e subsistema de memória não-volátil (NVS).
-*   **Módulo Sensor Pluviométrico (MH-RD):** Composto por uma grade condutora exposta à precipitação e um circuito integrador baseado no comparador de tensão
-      <p align="center">
-  <img src="PLACA MH-RD.jpeg.jpeg" alt="Protótipo do Sistema IoT" width="600">
-      </p>
-*   **LM393**. O módulo filtra as variações resistivas provocadas pela condutividade da água e entrega um sinal digital estabilizado.
+*   **Módulo Sensor Pluviométrico (MH-RD):** Composto por uma grade condutora exposta à precipitação e um circuito integrador baseado no comparador de tensão **LM393**. O módulo filtra as variações resistivas provocadas pela condutividade da água e entrega um sinal digital estabilizado.
+
+<p align="center">
+  <img src="PLACA MH-RD.jpeg" alt="Placa Sensora de Chuva MH-RD" width="320" style="margin-right: 20px;">
+  <img src="modulo_lm393.jpeg" alt="Módulo Comparador de Tensão LM393" width="320">
+  <br>
+  <em>Figura 2: Componentes do sensor de chuva (Esquerda: Placa sensora resistiva MH-RD; Direita: Módulo comparador de sinal LM393).</em>
+</p>
+
 *   **Sensor de Intrusão (Porta):** Interruptor magnético do tipo *Reed Switch* operando como contato seco.
 *   **Sensor Termo-Higrométrico (DHT11):** Transmissor digital microcontrolado que integra um sensor capacitivo de umidade e um termistor do tipo NTC, convertendo grandezas analógicas em pacotes de dados digitais por meio de protocolo de fio único (*Single-Wire*).
-     <p align="center">
-  <img src="DHT11.jpeg" alt="Protótipo do Sistema IoT" width="600">
-      </p>
 
 ### 📌 Justificativa Técnica da Pinagem Escolhida
 *   **GPIO 34 (Sensor de Chuva):** Pino físico do barramento do ESP32 DevKit configurado estritamente como entrada de dados (*Input Only*). A escolha baseia-se no fato de pertencer ao barramento interno **ADC1**, o que impede falhas de leitura ou desconexões quando o modem Wi-Fi do chip exige máxima corrente de transmissão (uma limitação física conhecida do barramento secundário ADC2 do ESP32).
@@ -94,6 +95,9 @@ A camada de interação com o usuário final é integrada diretamente à API de 
 ├── .gitignore               # Exclusão de arquivos temporários de compilação locais
 ├── LICENSE                  # Licença mit de livre distribuição acadêmica
 ├── README.md                # Documentação conceitual do projeto (Este arquivo)
+├── DHT11.jpeg               # Imagem do protótipo base
+├── PLACA MH-RD.jpeg         # Imagem da grade sensora de chuva
+├── modulo_lm393.jpeg        # Imagem do chip comparador do sensor de chuva
 └── src/
     └── src.ino              # Diretório contendo o arquivo de firmware do ESP32
 ```
