@@ -51,7 +51,7 @@ Abaixo está disposto o registro visual da das conexões de Hardware para cada u
 
 <p align="center">
 
-  <img src="montagemdht.jpeg" alt="Placa de Desenvolvimento ESP32 DevKit + Módulo DHT11" width="500">
+  <img src="montagemdht.jpg" alt="Placa de Desenvolvimento ESP32 DevKit + Módulo DHT11" width="500">
   <br>
   <em>Figura 2: Unidade de Processamento Central baseada na placa de desenvolvimento ESP32 DevKit + DHT11 (TEMP).</em>
 </p>
