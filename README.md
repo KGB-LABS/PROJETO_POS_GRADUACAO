@@ -12,7 +12,7 @@ O principal objetivo técnico é garantir a integridade dos dados locais, transm
 
 ---
 
-## 🏗️ Modelagem e Arquitetura do Sistema
+## 🏗️ Modelagem e Arquitetura do Sistema 
 
 O fluxo de dados do ecossistema foi estruturado sob o conceito de **comunicação bidirecional**, segregado em três camadas fundamentais (Percepção, Transporte e Aplicação):
 
