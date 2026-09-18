@@ -6,7 +6,7 @@
 ![License](https://shields.io)
 
 ## 📌 Concepção e Objetivo do Projeto
-Este projeto consiste no desenvolvimento de um sistema embarcado de automação, monitoramento ambiental e segurança perimetral residencial, fundamentado nas premissas da **Internet das Coisas (IoT)**. Desenvolvido como protótipo funcional para fins acadêmicos de Pós-Graduação, o ecossistema utiliza o microcontrolador **ESP32** como unidade central de processamento para gerenciar, de forma assíncrona, sensores meteorológicos, termo-higrométricos e de intrusão física.
+Este projeto consiste no desenvolvimento de um sistema embarcado de automação, monitoramento ambiental e segurança perimetral residencial, fundamentado nas premissas da **Internet das Coisas (IoT)**. Desenvolvido como protótipo funcional para fins acadêmicos de Pós-Graduação, o ecossistema utiliza a placa de desenvolvimento **ESP32 DevKit** como unidade central de processamento para gerenciar, de forma assíncrona, sensores meteorológicos, termo-higrométricos e de intrusão física.
 
 O principal objetivo técnico é garantir a integridade dos dados locais, transmitindo-os de maneira otimizada e segura para plataformas em nuvem, permitindo que o usuário interaja e receba alertas críticos em tempo real, independentemente de sua localização geográfica.
 
@@ -22,7 +22,7 @@ O fluxo de dados do ecossistema foi estruturado sob o conceito de **comunicaçã
   │  Sensor MH-RD        │ ──┐                                        ┌> │  HiveMQ Cloud (MQTT) │
   │  (Chuva / Digital)   │   │                                        │  └──────────────────────┘
   ├──────────────────────┤   │    ┌─────────────────────────────┐     │
-  │  Sensor Magnético    │   ├──> │ ESP32 (Unidade de Processo) │ ────┤
+  │  Sensor Magnético    │   ├──> │        ESP32 DevKit         │ ────┤
   │  (Porta / Reed)      │   │    │ - Gestão por Edge Trigger   │     │
   ├──────────────────────┤   │    │ - Portal Cativo Local       │     │  ┌──────────────────────┐
   │  Sensor DHT11        │ ──┘    └─────────────────────────────┘     └> │  Telegram Bot API    │
@@ -38,19 +38,31 @@ A camada de aplicação permite que o usuário faça consultas ativas ao sistema
 
 ---
 
+## 📸 Demonstração Visual e Protótipo
+
+> 💡 *Instrução: Salve a foto do seu circuito ou um diagrama refinado na pasta `assets` do seu repositório com o nome `prototipo.jpg` (ou altere o link abaixo caso use uma URL externa).*
+
+<p align="center">
+  <img src="assets/prototipo.jpg" alt="Protótipo do Sistema IoT Montado" width="650">
+  <br>
+  <em>Figura 1: Visão geral do hardware do sistema embarcado baseado em ESP32 DevKit e sua integração física.</em>
+</p>
+
+---
+
 ## 🛠️ Especificações Técnicas de Hardware
 
 A seleção dos componentes obedeceu a critérios rígidos de estabilidade de sinal, isolamento de ruídos eletromagnéticos e compatibilidade nativa de níveis lógicos em **3.3V DC**:
 
-*   **Unidade de Processamento Central (MCU):** ESP32 NodeMCU. Baseado no SoC Xtensa Dual-Core de 32 bits com clock de 240 MHz. Possui transceptores integrados para redes sem fio (Wi-Fi 802.11 b/g/n) e subsistema de memória não-volátil (NVS) para retenção de parâmetros.
+*   **Unidade de Processamento Central (MCU):** Placa de Desenvolvimento **ESP32 DevKit**. Baseada no SoC Xtensa Dual-Core de 32 bits com clock de até 240 MHz. Integra regulador de tensão onboard para conversão de alimentação USB/Externa para os níveis de barramento internos, além de transceptores para redes sem fio (Wi-Fi 802.11 b/g/n) e subsistema de memória não-volátil (NVS).
 *   **Módulo Sensor Pluviométrico (MH-RD):** Composto por uma grade condutora exposta à precipitação e um circuito integrador baseado no comparador de tensão **LM393**. O módulo filtra as variações resistivas provocadas pela condutividade da água e entrega um sinal digital estabilizado.
 *   **Sensor de Intrusão (Porta):** Interruptor magnético do tipo *Reed Switch* operando como contato seco.
 *   **Sensor Termo-Higrométrico (DHT11):** Transmissor digital microcontrolado que integra um sensor capacitivo de umidade e um termistor do tipo NTC, convertendo grandezas analógicas em pacotes de dados digitais por meio de protocolo de fio único (*Single-Wire*).
 
 ### 📌 Justificativa Técnica da Pinagem Escolhida
-*   **GPIO 34 (Sensor de Chuva):** Pino configurado estritamente como entrada de dados (*Input Only*). A escolha baseia-se no fato de pertencer ao barramento interno **ADC1**, o que impede falhas de leitura ou desconexões quando o modem Wi-Fi do chip exige máxima corrente de transmissão (uma limitação física conhecida do barramento secundário ADC2 do ESP32).
+*   **GPIO 34 (Sensor de Chuva):** Pino físico do barramento do ESP32 DevKit configurado estritamente como entrada de dados (*Input Only*). A escolha baseia-se no fato de pertencer ao barramento interno **ADC1**, o que impede falhas de leitura ou desconexões quando o modem Wi-Fi do chip exige máxima corrente de transmissão (uma limitação física conhecida do barramento secundário ADC2 do ESP32).
 *   **GPIO 23 (Sensor de Porta):** Mapeado com o resistor interno de pull-up da arquitetura do chip (`INPUT_PULLUP`). Isso garante que a linha de sinal mantenha-se em nível lógico estável (HIGH) quando o ímã se afasta do sensor, mitigando o efeito de estado flutuante (*floating state*) induzido por ruídos eletromagnéticos externos.
-*   **GPIO 0 (Botão BOOT):** Pino nativo de seleção de modo de gravação, reutilizado por software em tempo de execução para atuar como um botão físico de *Factory Reset* das configurações lógicas de rede.
+*   **GPIO 0 (Botão BOOT):** Pino nativo de seleção de modo de gravação presente na placa DevKit, reutilizado por software em tempo de execução para atuar como um botão físico de *Factory Reset* das configurações lógicas de rede.
 
 ---
 
@@ -92,3 +104,4 @@ O projeto foi concebido para ser escalável. Melhorias na eficiência energétic
 
 ## ⚖️ Licença de Uso
 Este projeto é distribuído de forma livre e aberta sob as diretrizes da Licença **MIT**.
+
