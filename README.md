@@ -43,11 +43,19 @@ A camada de aplicação permite que o usuário faça consultas ativas ao sistema
 Abaixo está disposto o registro visual da das conexões de Hardware para cada unidade de processamento do ecossistema IoT residencial.
 
 <p align="center">
-  <!-- Substitua pelo nome real do arquivo do seu ESP32 quando carregá-lo na raiz do repositório -->
+ 
   <img src="montagemmhrd.jpg" alt="Placa de Desenvolvimento ESP32 DevKit + Módulo MH-RD" width="500">
   <br>
-  <em>Figura 1: Unidade de Processamento Central baseada na placa de desenvolvimento ESP32 DevKit + Módulo MH-RD.</em>
+  <em>Figura 1: Unidade de Processamento Central baseada na placa de desenvolvimento ESP32 DevKit + Módulo MH-RD (CHUVA).</em>
 </p>
+
+<p align="center">
+
+  <img src="montagemmdht.jpeg" alt="Placa de Desenvolvimento ESP32 DevKit + Módulo DHT11" width="500">
+  <br>
+  <em>Figura 2: Unidade de Processamento Central baseada na placa de desenvolvimento ESP32 DevKit + DHT11 (TEMP).</em>
+</p>
+
 
 ---
 
