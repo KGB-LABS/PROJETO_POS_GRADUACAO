@@ -40,12 +40,13 @@ A camada de aplicação permite que o usuário faça consultas ativas ao sistema
 
 ## 📸 Demonstração Visual do Protótipo
 
-Abaixo estão dispostos os registros visuais dos componentes fundamentais do sistema embarcado integrados à placa de desenvolvimento ESP32 DevKit.
+Abaixo está disposto o registro visual da unidade central de processamento que gerencia todo o ecossistema IoT residencial.
 
 <p align="center">
-  <img src="DHT11.jpeg" alt="Módulo Sensor DHT11 e ESP32 DevKit" width="550">
+  <!-- Substitua pelo nome real do arquivo do seu ESP32 quando carregá-lo na raiz do repositório -->
+  <img src="esp32_devkit.jpeg" alt="Placa de Desenvolvimento ESP32 DevKit" width="500">
   <br>
-  <em>Figura 1: Unidade de processamento central baseada no ESP32 DevKit integrada ao sensor termo-higrométrico DHT11.</em>
+  <em>Figura 1: Unidade de Processamento Central baseada na placa de desenvolvimento ESP32 DevKit.</em>
 </p>
 
 ---
@@ -66,6 +67,12 @@ A seleção dos componentes obedeceu a critérios rígidos de estabilidade de si
 
 *   **Sensor de Intrusão (Porta):** Interruptor magnético do tipo *Reed Switch* operando como contato seco.
 *   **Sensor Termo-Higrométrico (DHT11):** Transmissor digital microcontrolado que integra um sensor capacitivo de umidade e um termistor do tipo NTC, convertendo grandezas analógicas em pacotes de dados digitais por meio de protocolo de fio único (*Single-Wire*).
+
+<p align="center">
+  <img src="DHT11.jpeg" alt="Sensor Termo-Higrométrico DHT11" width="350">
+  <br>
+  <em>Figura 3: Sensor Termo-Higrométrico (DHT11) responsável pela coleta das grandezas de temperatura e umidade.</em>
+</p>
 
 ### 📌 Justificativa Técnica da Pinagem Escolhida
 *   **GPIO 34 (Sensor de Chuva):** Pino físico do barramento do ESP32 DevKit configurado estritamente como entrada de dados (*Input Only*). A escolha baseia-se no fato de pertencer ao barramento interno **ADC1**, o que impede falhas de leitura ou desconexões quando o modem Wi-Fi do chip exige máxima corrente de transmissão (uma limitação física conhecida do barramento secundário ADC2 do ESP32).
@@ -95,7 +102,8 @@ A camada de interação com o usuário final é integrada diretamente à API de 
 ├── .gitignore               # Exclusão de arquivos temporários de compilação locais
 ├── LICENSE                  # Licença mit de livre distribuição acadêmica
 ├── README.md                # Documentação conceitual do projeto (Este arquivo)
-├── DHT11.jpeg               # Imagem do protótipo base
+├── esp32_devkit.jpeg        # Imagem da placa central de processamento (A carregar)
+├── DHT11.jpeg               # Imagem do sensor termo-higrométrico
 ├── PLACA MH-RD.jpeg         # Imagem da grade sensora de chuva
 ├── modulo_lm393.jpeg        # Imagem do chip comparador do sensor de chuva
 └── src/
@@ -105,7 +113,7 @@ A camada de interação com o usuário final é integrada diretamente à API de 
 ---
 
 ## 🤝 Contribuições e Melhorias
-O projeto foi concebido para ser escalável. Melhorias na eficiência energética do firmware (como aplicação de rotinas de *Deep Sleep*), adição de novos sensores industriais ou refinamentos nos mecanismos de segurança e criptografia são bem-vindas.
+O projeto foi concebido para ser escalável. Melhorias na eficiência energética do firmware (como aplicação de rotinas de *Deep Sleep*), adição de novos sensores industriais ou refinamentos nos mecanismos de segurança e criptografia são bem-vendas.
 
 1. Faça o **Fork** do repositório.
 2. Crie uma ramificação para sua modificação (`git checkout -b feature/NovaFuncionalidade`).
@@ -115,4 +123,3 @@ O projeto foi concebido para ser escalável. Melhorias na eficiência energétic
 
 ## ⚖️ Licença de Uso
 Este projeto é distribuído de forma livre e aberta sob as diretrizes da Licença **MIT**.
-
