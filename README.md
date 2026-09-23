@@ -108,10 +108,15 @@ Para garantir a segurança do sistema e evitar o armazenamento rígido (*hardcod
 * Caso o dispositivo perca a conectividade ou seja inicializado em um novo ambiente, ele gera autonomamente uma rede local criptografada no modo **Access Point (AP)** com portal cativo HTTP.
 * O usuário se conecta a este ponto de acesso via dispositivo móvel para selecionar e salvar de forma segura as novas credenciais de rede diretamente na memória flash do chip.
 
-### 2. Protocolo de Mensageria MQTT via Broker Cloud
+### 2. Protocolo de Mensagens MQTT via Broker Cloud
 O transporte das informações estruturadas de telemetria é feito através do protocolo **MQTT (Message Queuing Telemetry Transport)**, utilizando pacotes leves em formato **JSON**. A comunicação é direcionada por meio de sockets criptografados TLS (porta padrão 8883) para um cluster em nuvem de alta disponibilidade do **HiveMQ Cloud**, organizados sob tópicos hierárquicos. O cliente de rede dispensa a validação estática de cadeias de certificados públicos locais para otimizar o uso da memória RAM (SRAM) do sistema embarcado.
 
 ### 3. Interface Homem-Máquina (IHM) com Controle de Acesso
 A camada de interação com o usuário final é integrada diretamente à API de mensagem do **Telegram**. Para assegurar a confidencialidade e a integridade da automação residencial, o sistema possui uma diretiva rígida de controle de acesso baseada no identificador numérico único do usuário (*Chat ID*) e Token. Qualquer tentativa de comando ou requisição originada por contas não cadastradas é sumariamente rejeitada pelo microcontrolador, ainda que tenham acessado o bot.
 
+<p align="center">
+  <img src="DHT11.jpeg" alt="Visão do Bot="350">
+  <br>
+  <em>Figura 4: Visão geral do funcionamento do bot.</em>
+</p>
 
