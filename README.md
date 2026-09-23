@@ -57,6 +57,14 @@ Abaixo está disposto o registro visual da das conexões de Hardware para cada u
 </p>
 
 
+<p align="center">
+
+  <img src="montagemreedt.jpg" alt="Placa de Desenvolvimento ESP32 DevKit + Módulo Reed" width="500">
+  <br>
+  <em>Figura 3: Unidade de Processamento Central baseada na placa de desenvolvimento ESP32 DevKit + Módulo Reed Sensor de Porta.</em>
+</p>
+
+
 ---
 
 ## 🛠️ Especificações Técnicas de Hardware
