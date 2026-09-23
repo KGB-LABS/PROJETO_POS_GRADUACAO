@@ -117,6 +117,6 @@ A camada de interação com o usuário final é integrada diretamente à API de 
 <p align="center">
   <img src="bot.jpeg" alt="Visão do Bot="350">
   <br>
-  <em>Figura 4: Visão geral do funcionamento do bot.</em>
+  <em>Figura 5: Visão geral do funcionamento do bot.</em>
 </p>
 
