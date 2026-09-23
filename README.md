@@ -59,7 +59,7 @@ Abaixo está disposto o registro visual da das conexões de Hardware para cada u
 
 <p align="center">
 
-  <img src="montagemreedt.jpg" alt="Placa de Desenvolvimento ESP32 DevKit + Módulo Reed" width="500">
+  <img src="montagemreed.jpg" alt="Placa de Desenvolvimento ESP32 DevKit + Módulo Reed" width="500">
   <br>
   <em>Figura 3: Unidade de Processamento Central baseada na placa de desenvolvimento ESP32 DevKit + Módulo Reed Sensor de Porta.</em>
 </p>
@@ -75,7 +75,7 @@ A seleção dos componentes obedeceu a critérios rígidos de estabilidade de si
 <p align="center">
   <img src="esp32.jpeg" alt="Esp32 Devkit" width="350">
   <br>
-  <em>Figura 1: MCU tipo Esp32 DEVKIT responsável pelo processamento.</em>
+  <em>Figura 4: MCU tipo Esp32 DEVKIT responsável pelo processamento.</em>
 </p>
 
 *   **Módulo Sensor Pluviométrico (MH-RD):** Composto por uma grade condutora exposta à precipitação e um circuito integrador baseado no comparador de tensão **LM393**. O módulo filtra as variações resistivas provocadas pela condutividade da água e entrega um sinal digital estabilizado.
@@ -84,14 +84,14 @@ A seleção dos componentes obedeceu a critérios rígidos de estabilidade de si
   <img src="PLACA MH-RD.jpeg" alt="Placa Sensora de Chuva MH-RD" width="320" style="margin-right: 20px;">
   <img src="modulo_lm393.jpeg" alt="Módulo Comparador de Tensão LM393" width="320">
   <br>
-  <em>Figura 2: Componentes do sensor de chuva (Esquerda: Placa sensora resistiva MH-RD; Direita: Módulo comparador de sinal LM393).</em>
+  <em>Figura 5: Componentes do sensor de chuva (Esquerda: Placa sensora resistiva MH-RD; Direita: Módulo comparador de sinal LM393).</em>
 </p>
 
 *   **Sensor de Intrusão (Porta):** Interruptor magnético MC 38 *Reed Switch* operando como contato aberto/fechado.
 <p align="center">
   <img src="sensorporta.jpeg" alt="Sensor Porta Reed Switch" width="350">
   <br>
-  <em>Figura 3: Sensor MC 38 Reed Switch responsável por informar o estado aberto/fechado de porta.</em>
+  <em>Figura 6: Sensor MC 38 Reed Switch responsável por informar o estado aberto/fechado de porta.</em>
 </p>
 
 *   **Sensor Termo-Higrométrico (DHT11):** Transmissor digital microcontrolado que integra um sensor capacitivo de umidade e um termistor do tipo NTC, convertendo grandezas analógicas em pacotes de dados digitais por meio de protocolo de fio único (*Single-Wire*).
@@ -99,7 +99,7 @@ A seleção dos componentes obedeceu a critérios rígidos de estabilidade de si
 <p align="center">
   <img src="DHT11.jpeg" alt="Sensor Termo-Higrométrico DHT11" width="350">
   <br>
-  <em>Figura 4: Sensor Termo-Higrométrico (DHT11) responsável pela coleta das grandezas de temperatura e umidade.</em>
+  <em>Figura 7: Sensor Termo-Higrométrico (DHT11) responsável pela coleta das grandezas de temperatura e umidade.</em>
 </p>
 
 ### 📌 Justificativa Técnica da Pinagem Escolhida
@@ -125,6 +125,6 @@ A camada de interação com o usuário final é integrada diretamente à API de 
 <p align="center">
   <img src="bot.jpeg" alt="Visão do Bot="350">
   <br>
-  <em>Figura 5: Visão geral do funcionamento do bot.</em>
+  <em>Figura 8: Visão geral do funcionamento do bot.</em>
 </p>
 
