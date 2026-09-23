@@ -115,7 +115,7 @@ O transporte das informações estruturadas de telemetria é feito através do p
 A camada de interação com o usuário final é integrada diretamente à API de mensagem do **Telegram**. Para assegurar a confidencialidade e a integridade da automação residencial, o sistema possui uma diretiva rígida de controle de acesso baseada no identificador numérico único do usuário (*Chat ID*) e Token. Qualquer tentativa de comando ou requisição originada por contas não cadastradas é sumariamente rejeitada pelo microcontrolador, ainda que tenham acessado o bot.
 
 <p align="center">
-  <img src="DHT11.jpeg" alt="Visão do Bot="350">
+  <img src="bot.jpeg" alt="Visão do Bot="350">
   <br>
   <em>Figura 4: Visão geral do funcionamento do bot.</em>
 </p>
