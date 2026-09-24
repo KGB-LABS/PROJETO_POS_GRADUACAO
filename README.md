@@ -1,12 +1,7 @@
-# Sistema IoT de Monitoramento Residencial Inteligente e Segurança Periférica com ESP32
-
-![GitHub repo size](https://shields.io)
-![GitHub language count](https://shields.io)
-![GitHub top language](https://shields.io)
-![License](https://shields.io)
+# Sistema IoT de Monitoramento Residencial Inteligente com ESP32
 
 ## 📌 Concepção e Objetivo do Projeto
-Este projeto consiste no desenvolvimento de um sistema embarcado de automação, monitoramento ambiental e segurança perimetral residencial, fundamentado nas premissas da **Internet das Coisas (IoT)**. Desenvolvido como protótipo funcional para fins acadêmicos de Pós-Graduação, o ecossistema utiliza a placa de desenvolvimento **ESP32 DevKit** como unidade central de processamento para gerenciar, de forma assíncrona, sensores meteorológicos, termo-higrométricos e de intrusão física.
+Este projeto consiste no desenvolvimento de um sistema embarcado de automação, monitoramento climático e segurança perimetral residencial, fundamentado nas premissas da **Internet das Coisas (IoT)**. Desenvolvido como protótipo funcional para fins acadêmicos de Pós-Graduação, o ecossistema utiliza a placa de desenvolvimento **ESP32 DevKit** como unidade central de processamento para gerenciar, de forma assíncrona, sensores meteorológicos, termo-higrométricos e de intrusão física.
 
 O principal objetivo técnico é garantir a integridade dos dados locais, transmitindo-os de maneira otimizada e segura para plataformas em nuvem, permitindo que o usuário interaja e receba alertas críticos em tempo real, independentemente de sua localização geográfica.
 
@@ -84,7 +79,7 @@ A seleção dos componentes obedeceu a critérios rígidos de estabilidade de si
   <img src="PLACA MH-RD.jpeg" alt="Placa Sensora de Chuva MH-RD" width="320" style="margin-right: 20px;">
   <img src="modulo_lm393.jpeg" alt="Módulo Comparador de Tensão LM393" width="320">
   <br>
-  <em>Figura 5: Componentes do sensor de chuva (Esquerda: Placa sensora resistiva MH-RD; Direita: Módulo comparador de sinal LM393).</em>
+  <em>Figura 5: Componentes do sensor de chuva (Esquerda: Placa resistiva MH-RD; Direita: Módulo comparador de sinal LM393).</em>
 </p>
 
 *   **Sensor de Intrusão (Porta):** Interruptor magnético MC 38 *Reed Switch* operando como contato aberto/fechado.
