@@ -123,3 +123,10 @@ A camada de interação com o usuário final é integrada diretamente à API de 
   <em>Figura 8: Visão geral do funcionamento do bot.</em>
 </p>
 
+## 🧊 Arquivo STL 3D da Case recomendada para o projeto
+
+<p align="center">
+  <img src="caseesp2.jpg" alt="Visão do Bot="350">
+  <br>
+  <em>Figura 8: Visão geral do funcionamento do bot.</em>
+</p>
