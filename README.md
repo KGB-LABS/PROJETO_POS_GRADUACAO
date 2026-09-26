@@ -125,8 +125,10 @@ A camada de interação com o usuário final é integrada diretamente à API de 
 
 ## 🧊 Arquivo STL 3D da Case recomendada para o projeto
 
+https://makerworld.com/pt/models/186291-esp32-wroom-32-usb-c-box-with-lid?from=search#profileId-205082
+
 <p align="center">
-  <img src="caseesp2.jpg" alt="Visão do Bot="350">
+  <img src="caseesp2.jpg" alt="Caset="350">
   <br>
-  <em>Figura 8: Visão geral do funcionamento do bot.</em>
+  <em>Figura 9: Case impresso em 3D.</em>
 </p>
